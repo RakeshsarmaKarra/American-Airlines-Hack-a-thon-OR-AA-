@@ -21,6 +21,13 @@ Airport Info: Metadata describing airport codes, geography, and region groupings
 Targets: Future destination labels used to train and evaluate supervised models.                                                                                                                                    
 All tables are joined using an abstracted customer key (loyalty ID) to build a unified behavior view.                                                                                                                                    
 
+## Preprocessing:
+Type casting and cleaning across all tables.                                                                                                                                                                               
+Encoding of categorical features and scaling of numerical features via scikit‑learn pipelines.                                                                                                                                            
+Models explored (high level):                                                                                                                                                                               
+Tree‑based classifiers (e.g., random‑forest–style models).                                                                                                                                                                               
+Gradient‑boosted approaches for stronger nonlinear performance. 
+
 ## Feature Engineering
 The project focuses on customer‑level behavioral features that summarize past interactions and preferences, suitable for destination prediction and recommendation.
 ​
@@ -34,14 +41,7 @@ These signals are aggregated into a single feature matrix keyed by the customer 
 
 ## Modeling Approach
 The recommendation prototype is framed as a multiclass classification problem: predict a future destination label given engineered behavioral features.
-​
-## Preprocessing:
-Type casting and cleaning across all tables.                                                                                                                                                                               
-Encoding of categorical features and scaling of numerical features via scikit‑learn pipelines.                                                                                                                                            
-Models explored (high level):                                                                                                                                                                               
-Tree‑based classifiers (e.g., random‑forest–style models).                                                                                                                                                                               
-Gradient‑boosted approaches for stronger nonlinear performance.                                                                                                                                                                               
-​
+​                                                                                                                                                                           ​
 ## Evaluation:
 Train/test split at the customer level.                                                                                                                                            
 Accuracy and related metrics used for baseline assessment, with the intent to extend toward top‑N recommendation quality metrics.
